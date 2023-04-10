@@ -7,18 +7,18 @@
     If you wanna make this loadstring: loadstring(game:HttpGet('link here')()
     replace the link here part with the raw version of this github or goto: https://pastebin.com/sZm0bmTB
 ]]
+--]]
+
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
 local Window = Library.CreateLib("TADA hub", "Ocean")
 
---Tab 1
-local Quickhacks = Window:NewTab("Quick Hacks")
 
---Section 1
+local Quickhacks = Window:NewTab("Quick Hacks")
 local QHSection = QuickHacks:NewSection("Quick Hacks")
 
---Buttons for quick hacks section
+
 QHSection:NewButton("Btools Client Sided", "Btools/F3X only you can see it", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/rouxhaver/scripts-2/main/FE%20BTools%20V3.Lua')()
 end)
@@ -26,58 +26,3 @@ end)
 QHSection:NewButton("infinite Yield", "FE Admin Commands", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
-
-
-QHSection:NewButton("Icehub", "Icehub is a admin panel for multiple games.", function()
-    loadstring(game:HttpGet('https://scriptblox.com/raw/Brookhaven-RP-IceHub-Brookhaven-8460'))()
-end)
-
---Tab 2
-local Sus = Window:NewTab("Player")
-
---Section 2
-local SusSection = Sus:NewSection("Player")
-
---Buttons
-SusSection:NewToggle("Super-Human", "Run fast Also jump high", function(state)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 102
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 150
-else
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-
-    SusSection:NewSlider("WalkSpeed", "Set Custom Jump Power!", 600, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-    end)
-     
-    SusSection:NewSlider("JumpPower", "Set Custom Walk Speed!", 600, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-    end)
-
-    SusSection:NewButton("Rest WS&JP", "Rest them with a button!", function()
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-    end)
-
-    SusSection:NewButton("Fly", "Fly around the map!", function()
-        loadstring(game:HttpGet('https://scriptblox.com/raw/Universal-Script-FLY-GUI-V3-8402'))()
-    end)
-    
-    --tab 3
-    local Other = Window:NewTab("Other")
-
-    --Section 3 also i think im losing count
-
-    local OtherSection = Other:NewSection("Other")
-
-    OtherSection:NewButton("Chathax", "Be anybody!", function()
-        loadstring(game:HttpGet('https://pastebin.com/raw/MBpnp3yS'))()
-    end)
-
-    OtherSection:NewButton("Print hello", "Print hello in console", function()
-        print("hello")
-    end)
-
-    OtherSection:NewButton("Stream Snipe", "Join anyone", function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Blissful4992/Miscellaneous/main/StreamSniper.lua'))()   
-    end)
