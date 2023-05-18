@@ -63,7 +63,7 @@ TeleportsSection:NewButton("Guard Weapons", "Teleport there!", function()
 end)
 
 TeleportsSection:NewButton("Crimbase", "Teleport there!", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/tpcrimbase'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/tpcrimbasee'))()
 end)
 
 TeleportsSection:NewButton("Spawn", "Where you select team", function()
