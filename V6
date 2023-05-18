@@ -1,0 +1,135 @@
+wait(1)
+
+local notifSound = Instance.new("Sound",workspace)
+notifSound.PlaybackSpeed = 1.5
+notifSound.Volume = 0.15
+notifSound.SoundId = "rbxassetid://2482356144"
+notifSound.PlayOnRemove = true
+notifSound:Destroy()
+game.StarterGui:SetCore("SendNotification", {Title = "Loaded", Text = "prison breaker hub V6 loaded successfully!", Icon = "rbxassetid://11457672278", Duration = 5, Button1 = "ok lemme use"})
+
+wait(2)
+
+local notifSound = Instance.new("Sound",workspace)
+notifSound.PlaybackSpeed = 1.5
+notifSound.Volume = 0.15
+notifSound.SoundId = "rbxassetid://3154962208"
+notifSound.PlayOnRemove = true
+notifSound:Destroy()
+game.StarterGui:SetCore("SendNotification", {Title = "Version", Text = "Your using V6 btw", Icon = "rbxassetid://13049743511", Duration = 5, Button1 = "Pls script now"})
+
+wait(3)
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Prison Breaker Hub V6", "Sentinel")
+
+
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+MainSection:NewButton("Tiger Admin", "OP Prison Life Admin", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/H17S32/Tiger_Admin/main/Script'))()
+end)
+
+MainSection:NewButton("Aliafanboys gui", "Its alright", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/Jk8dDSXw'))()
+end)
+
+MainSection:NewButton("Sword", "Get a FE sword!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SmartModBoy/script3/main/prisonsword'))()
+end)
+
+MainSection:NewButton("prison crasher GUI", "GUI", function()
+    loadstring(game:HttpGet('https://gist.githubusercontent.com/MRSBLACK999/7e06444cf65a63395e23d6570d159556/raw/08d68cc6794ad94a2b68ce83d2361cd01cd42ff5/Admin%2520panel'))()
+end)
+
+MainSection:NewButton("Inf Stamina", "No stoping!", function()
+    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/ImMejor35/Prison-Life/main/Infinite%20Stamina.lua'))()
+end)
+
+MainSection:NewButton("Aimbot", "Prison Life Aimbot", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/aimai'))()
+end)
+
+local Teleports = Window:NewTab("Teleports")
+local TeleportsSection = Teleports:NewSection("Tps")
+
+TeleportsSection:NewButton("Yard", "Teleport there!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/yardtp'))()
+end)
+
+TeleportsSection:NewButton("Guard Weapons", "Teleport there!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/tppoliceweapons'))()
+end)
+
+TeleportsSection:NewButton("Crimbase", "Teleport there!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/tpcrimbase'))()
+end)
+
+TeleportsSection:NewButton("Spawn", "Where you select team", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/spawntp'))()
+end)
+
+TeleportsSection:NewButton("Prison", "Teleport there!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/tpprison'))()
+end)
+
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewToggle("Super-Human", "Go fast and jump high.", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 187
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 159
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
+PlayerSection:NewSlider("WalkSpeed", "Set Custom Walkspeed!", 400, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+ 
+PlayerSection:NewSlider("JumpPower", "Set Custom Jump Power!", 453, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+ 
+PlayerSection:NewButton("Rest WS&JP", "Rest them with a button!", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
+PlayerSection:NewButton("Fly GUI Mobile", "Fly around the map!", function()
+    loadstring(game:HttpGet('https://scriptblox.com/raw/Universal-Script-FLY-GUI-V3-8402'))()
+end)
+
+PlayerSection:NewButton("Fly GUI PC", "Fly around the map!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/C5qp7YeG'))()
+end)
+
+PlayerSection:NewButton("Inf Jump GUI", "Jump with no limt!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/ZsGXfxQZ'))()
+end)
+
+
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+
+OtherSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+OtherSection:NewButton("Chathax", "Be anybody!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/BT1uban5'))()
+end)
+
+local Thanks = Window:NewTab("Thanks")
+local ThanksSection = Thanks:NewSection("Thanks to")
+
+ThanksSection:NewLabel("Thanks daslol#6258!")
+ThanksSection:NewLabel("Thanks pogger#3917!")
+
+MainSection:NewLabel("Some things may be patched.")
+MainSection:NewLabel("Dont skid me")
+MainSection:NewLabel("im da biggest bird!")
