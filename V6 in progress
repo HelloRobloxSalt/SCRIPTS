@@ -16,12 +16,12 @@ notifSound.Volume = 0.15
 notifSound.SoundId = "rbxassetid://3154962208"
 notifSound.PlayOnRemove = true
 notifSound:Destroy()
-game.StarterGui:SetCore("SendNotification", {Title = "Version:", Text = "Your using V6 btw", Icon = "rbxassetid://13049743511", Duration = 5, Button1 = "Pls script now"})
+game.StarterGui:SetCore("SendNotification", {Title = "Version", Text = "Your using V6 btw", Icon = "rbxassetid://13049743511", Duration = 5, Button1 = "Pls script now"})
 
 wait(3)
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Prison Breaker Hub V6", "Sentinel")
+local Window = Library.CreateLib("Prison Breaker Hub V6", "DarkTheme")
 
 
 local Main = Window:NewTab("Main")
