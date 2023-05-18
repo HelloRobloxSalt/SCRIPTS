@@ -1,5 +1,9 @@
 wait(1)
 
+print("Loaded Script")
+
+wait(1)
+
 local notifSound = Instance.new("Sound",workspace)
 notifSound.PlaybackSpeed = 1.5
 notifSound.Volume = 0.15
@@ -22,6 +26,25 @@ wait(3)
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Prison Breaker Hub V6", "DarkTheme")
+
+local Welcome = Window:NewTab("Welcome")
+local WelcomeSection = Welcome:NewSection("Welcome!")
+
+WelcomeSection:NewLabel("Welcome to Prison Breaker Hub V6!")
+WelcomeSection:NewLabel("Like our bloxscripts if you like it!")
+WelcomeSection:NewLabel("Also comment on our bloxscript!")
+WelcomeSection:NewLabel("Try using tiger admin in Main tab.")
+WelcomeSection:NewLabel("Not everything in script belongs to me.")
+WelcomeSection:NewLabel("Everything in Teleports tab does.")
+WelcomeSection:NewLabel("Thanks to creators of scripts in GUI and kavo!")
+WelcomeSection:NewLabel("Enjoy!")
+
+WelcomeSection:NewButton("Print Welcome!", "Print in console", function()
+    print("Welcome!")
+end)
+
+WelcomeSection:NewLabel("Thanks to everyone in credits tab!")
+
 
 
 local Main = Window:NewTab("Main")
