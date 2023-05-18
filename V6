@@ -16,7 +16,7 @@ notifSound.Volume = 0.15
 notifSound.SoundId = "rbxassetid://3154962208"
 notifSound.PlayOnRemove = true
 notifSound:Destroy()
-game.StarterGui:SetCore("SendNotification", {Title = "Version", Text = "Your using V6 btw", Icon = "rbxassetid://13049743511", Duration = 5, Button1 = "Pls script now"})
+game.StarterGui:SetCore("SendNotification", {Title = "Version:", Text = "Your using V6 btw", Icon = "rbxassetid://13049743511", Duration = 5, Button1 = "Pls script now"})
 
 wait(3)
 
