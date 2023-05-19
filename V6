@@ -43,7 +43,7 @@ WelcomeSection:NewButton("Print Welcome!", "Print in console", function()
     print("Welcome!")
 end)
 
-WelcomeSection:NewLabel("Thanks to everyone in credits tab!")
+WelcomeSection:NewLabel("Thanks to everyone in Thanks tab!")
 
 
 
@@ -147,7 +147,7 @@ OtherSection:NewButton("Chathax", "Be anybody!", function()
     loadstring(game:HttpGet('https://pastebin.com/raw/BT1uban5'))()
 end)
 
-local Thanks = Window:NewTab("Thanks")
+local Thanks = Window:NewTab("Thanks!")
 local ThanksSection = Thanks:NewSection("Thanks to")
 
 ThanksSection:NewLabel("Thanks daslol#6258!")
