@@ -1,0 +1,201 @@
+wait(1)
+
+print("Loaded Script")
+
+wait(1)
+
+local notifSound = Instance.new("Sound",workspace)
+notifSound.PlaybackSpeed = 1.5
+notifSound.Volume = 0
+notifSound.SoundId = "rbxassetid://2482356144"
+notifSound.PlayOnRemove = true
+notifSound:Destroy()
+game.StarterGui:SetCore("SendNotification", {Title = "Note", Text = "will only work if in prison life", Icon = "rbxassetid://11457672278", Duration = 5, Button1 = "Ok"})
+
+wait(2)
+
+local notifSound = Instance.new("Sound",workspace)
+notifSound.PlaybackSpeed = 1.5
+notifSound.Volume = 0.15
+notifSound.SoundId = "rbxassetid://2482356144"
+notifSound.PlayOnRemove = true
+notifSound:Destroy()
+game.StarterGui:SetCore("SendNotification", {Title = "Loaded", Text = "prison breaker hub V7 loaded successfully!", Icon = "rbxassetid://11457672278", Duration = 5, Button1 = "ok lemme use"})
+
+wait(2)
+
+local notifSound = Instance.new("Sound",workspace)
+notifSound.PlaybackSpeed = 1.5
+notifSound.Volume = 0.15
+notifSound.SoundId = "rbxassetid://3154962208"
+notifSound.PlayOnRemove = true
+notifSound:Destroy()
+game.StarterGui:SetCore("SendNotification", {Title = "Version", Text = "Your using V7 btw", Icon = "rbxassetid://13049743511", Duration = 5, Button1 = "Pls script now"})
+
+wait(3)
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Prison Breaker Hub V7", "DarkTheme")
+
+if game.PlaceId == 155615604 then
+
+local Welcome = Window:NewTab("Welcome")
+local WelcomeSection = Welcome:NewSection("Welcome!")
+
+WelcomeSection:NewLabel("Welcome to Prison Breaker Hub V7!")
+WelcomeSection:NewLabel("Like our Scriptblox if you like it!")
+WelcomeSection:NewLabel("Also comment on our Scriptblox!")
+WelcomeSection:NewLabel("Try using tiger admin in Main tab.")
+WelcomeSection:NewLabel("Not everything in script belongs to me.")
+WelcomeSection:NewLabel("Everything in Teleports tab does.")
+WelcomeSection:NewLabel("Thanks to creators of scripts in GUI and kavo!")
+WelcomeSection:NewLabel("Enjoy!")
+
+WelcomeSection:NewButton("Print Welcome!", "Print in console", function()
+    print("Welcome!")
+end)
+
+WelcomeSection:NewLabel("Thanks to everyone in thanks tab!")
+
+local Links = Window:NewTab("Links")
+local LinksSection = Link:NewSection("Write down in browser")
+
+LinksSection:NewLabel("cancel any downloads. they are viruses and not it.")
+LinksSection:NewLabel("Scriptblox: https://scriptblox.com/script/Prison-Life-Breaker-Hub-10987")
+LinksSection:NewLabel("github: https://github.com/HelloRobloxSalt/Prison-Breaker-Hub")
+LinksSection:NewLabel("YouTube: https://www.youtube.com/channel/UCu7xcO3cs8lCoOl0zqJSbnw")
+
+wait(1)
+
+local Log = Window:NewTab("Update Log")
+local LogSection = Log:NewSection("Updates:")
+
+LogSection:NewLabel("max jumppower in slider now 890!")
+LogSection:NewLabel("max speed in slider now 870!")
+LogSection:NewLabel("fly gui works better!")
+LogSection:NewLabel("replaced prison crasher gui")
+LogSection:NewLabel("2 new sections")
+LogSection:NewLabel("only launchs in prison life!")
+
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection:NewButton("Sword", "Get a FE sword!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SmartModBoy/script3/main/prisonsword'))()
+end)
+
+MainSection:NewButton("Inf Stamina", "No stoping!", function()
+    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/ImMejor35/Prison-Life/main/Infinite%20Stamina.lua'))()
+end)
+
+MainSection:NewButton("Aimbot", "Prison Life Aimbot", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/aimai'))()
+end)
+
+local AdminSection = Main:NewSection("Admin Commands")
+
+AdminSection:NewButton("Tiger Admin", "OP Prison Life Admin", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/H17S32/Tiger_Admin/main/Script'))()
+end)
+
+AdminSection:NewButton("Aliafanboys gui", "Its alright", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/Jk8dDSXw'))()
+end)
+
+AdminSection:NewButton("Septex Admin", "Half of it is patched", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/Septex%20Admin'))()
+end)
+
+local Teleports = Window:NewTab("Teleports")
+local TeleportsSection = Teleports:NewSection("Tps")
+
+TeleportsSection:NewButton("Yard", "Teleport there!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/yardtp'))()
+end)
+
+TeleportsSection:NewButton("Guard Weapons", "Teleport there!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/tppoliceweapons'))()
+end)
+
+TeleportsSection:NewButton("Crimbase", "Teleport there!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/tpcrimbasee'))()
+end)
+
+TeleportsSection:NewButton("Spawn", "Where you select team", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/spawntp'))()
+end)
+
+TeleportsSection:NewButton("Prison", "Teleport there!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/tpprison'))()
+end)
+
+TeleportsSection:NewButton("Cafeteria", "Teleport there!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/HelloRobloxSalt/SCRIPTS/main/tpcafe'))()
+end)
+
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewToggle("Super-Human", "Go fast and jump high.", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 187
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 159
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
+PlayerSection:NewSlider("WalkSpeed", "Set Custom Walkspeed!", 870, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+ 
+PlayerSection:NewSlider("JumpPower", "Set Custom Jump Power!", 890, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+PlayerSection:NewTextBox("WalkSpeed", "Custom Speed", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+end)
+
+PlayerSection:NewTextBox("JumpPower", "Custom JumpPower", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
+end)
+
+PlayerSection:NewButton("Rest WS&JP", "Rest them with a button!", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
+PlayerSection:NewButton("Fly GUI", "Fly around the map!", function()
+    loadstring(game:HttpGet('https://scriptblox.com/raw/Universal-Script-FLY-GUI-V3-8402'))()
+end)
+
+PlayerSection:NewButton("Inf Jump GUI PATCHED", "Jump with no limt!", function()
+    print("Patched Script attempted")
+end)
+
+local ToolSection = Player:NewSection("Tools")
+
+ToolSection:NewButton("F3X", "Client side only you see", function()
+    loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+end)
+
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+
+OtherSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+OtherSection:NewButton("Chathax", "Be anybody!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/BT1uban5'))()
+end)
+
+local Thanks = Window:NewTab("Thanks")
+local ThanksSection = Thanks:NewSection("Thanks to")
+
+ThanksSection:NewLabel("Thanks daslol#6258!")
+ThanksSection:NewLabel("Thanks pogger#3917!")
+ThanksSection:NewLabel("Thanks NOVA__AMV#0092!")
